@@ -1,0 +1,10 @@
+# Borland C++ / DOSBox build output
+*.OBJ
+*.obj
+*.EXE
+*.exe
+*.MAP
+*.DSK
+*.SWP
+*.BAK
+.DS_Store
