@@ -17,7 +17,7 @@ void List::decPCB() {
 	PCB_Node* old = temp;
 	temp->time_wait=temp->time_wait-1;
 
-	while( (temp->time_wait == 0)&&(temp!=0)) {
+	while( (temp!=0)&&(temp->time_wait == 0)) {
 
       head=temp->next;
 		PCB_Node* old = temp;

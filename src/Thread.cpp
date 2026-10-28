@@ -261,16 +261,18 @@ Handler_Node* old = 0;
 Handler_Node* help;
 while (temp) {
 if (temp->signal_num == sig) {
-	if (this->myPCB->handler_list->head==temp) this->myPCB->handler_list->head=this->myPCB->handler_list->head->next;
-if (old != 0) {
-old->next = temp->next;
-}
 help = temp;
 temp = temp->next;
-delete help;
-
+if (old != 0) {
+old->next = temp;
+} else {
+this->myPCB->handler_list->head = temp;
 }
+delete help;
+} else {
+old = temp;
 temp = temp->next;
+}
 }
 
 }
